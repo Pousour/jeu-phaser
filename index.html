@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Jeux Phaser</title>
+     <link rel="stylesheet" href="style.css">
+     
+
+
+    
+</head>
+<body>
+    <h1 id="compteur">temps restant: </h1>
+    <a href="#" class="myButton" id="restart1" onClick="location.reload(true)">restart</a>
+    <h2 id="etoiles">bonus: </h2>
+    <h2 id="help" onClick=afficherHelp()>help </h2>
+    <ul id="list">
+        <li>restart: enter</li>
+        <li>lancer boule: e</li>
+        <li>se deplacer: fleches</li>
+        <li>plateforme verte: plus de vitesse</li>
+        <li>plateforme rouge: 1 seul grand saut</li>
+        <li>vous faire un double saut</li>
+        <li>vous avez 60 secondes pour terminer <br> le jeu sinon vous perdez!</li>
+    </ul>
+    <h2 id="musiqueoff">Musique </h2>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.52.0/phaser.min.js" integrity="sha512-2wu8HKyxH3r65DZuWEdiov7+mBVti4Kfjg9WTXNP8qitejYSBn2S+Kgi4M3ctlnA9qTDU6hyTsiqpIfFhQBY0Q==" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script>
+        var helpAffiche = false;
+        function afficherHelp() {
+            if(helpAffiche == false) {
+                document.getElementById("list").style.left = "1.5vw";
+                helpAffiche = true;
+            } else {
+                document.getElementById("list").style.left = "-100vw";
+                helpAffiche = false;
+            }
+
+        }
+    </script>
+</body>
+</html>
